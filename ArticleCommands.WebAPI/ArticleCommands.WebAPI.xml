@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ArticleCommands.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICustomerRepository.CreateAsync(DomainUsage.Shared.Models.Customer)">
+            <summary>
+            CreateAsync
+            </summary>
+            <param name="customer"></param>
+            <returns>Customer</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICustomerRepository.DeleteAsync(DomainUsage.Shared.Models.Customer)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="customer"></param>
+            <returns>void</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICustomerRepository.GetAllAsync">
+            <summary>
+            GetAllAsync
+            </summary>
+            <returns>customer list</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICustomerRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            GetByIdAsync
+            </summary>
+            <param name="Id"></param>
+            <returns>Customer</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICustomerRepository.UpdateAsync(DomainUsage.Shared.Models.Customer)">
+            <summary>
+            UpdateAsync
+            </summary>
+            <param name="customer"></param>
+            <returns>Customer</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            CreateHostBuilder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
