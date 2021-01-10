@@ -14,11 +14,12 @@ namespace ArticleCommands.WebAPI.Controllers
     {
         private readonly ICustomerRepository _repo;
         private readonly ILogger<CustomerController> _logger;
-
-        public CustomerController(ICustomerRepository repo, ILogger<CustomerController> logger)
+        private readonly Serilog.ILogger _logr;
+        public CustomerController(ICustomerRepository repo, ILogger<CustomerController> logger, Serilog.ILogger logr)
         {
             _repo = repo;
             _logger = logger;
+            _logr = logr;
         }
 
         [HttpGet]
@@ -27,6 +28,8 @@ namespace ArticleCommands.WebAPI.Controllers
         {
             var theCustomer = await _repo.GetByIdAsync(Id);
             _logger.LogInformation("You requested a method {MethodName}", System.Reflection.MethodBase.GetCurrentMethod().Name);
+            _logr.Information("The customer under review is {@Customer}", theCustomer);
+
             return Ok(theCustomer);
         }
 
@@ -36,6 +39,8 @@ namespace ArticleCommands.WebAPI.Controllers
         {
             _logger.LogInformation("You requested a method {MethodName}", System.Reflection.MethodBase.GetCurrentMethod().Name);
             var theCustomer = await _repo.GetAllAsync();
+
+            _logr.Information("The customer under review is {@Customer}", theCustomer);
             return Ok(theCustomer);
         }
 
@@ -52,11 +57,14 @@ namespace ArticleCommands.WebAPI.Controllers
             if (!ModelState.IsValid)
             {
                 _logger.LogInformation("You requested a method {MethodName} for {customer}", System.Reflection.MethodBase.GetCurrentMethod().Name, customer);
+                _logr.Information("The following customer has been added {@Customer}", customer);
                 return BadRequest(ModelState);
             }
             else
             {
-                _logger.LogError("You requested a method {MethodName}", System.Reflection.MethodBase.GetCurrentMethod().Name);
+                _logger.LogInformation("You requested a method {MethodName}", System.Reflection.MethodBase.GetCurrentMethod().Name);
+
+                _logr.Information("The following customer has been added {@Customer}", customer);
             }
             var theCustomer = await _repo.CreateAsync(customer);
             return Ok(theCustomer);
@@ -69,6 +77,7 @@ namespace ArticleCommands.WebAPI.Controllers
         {
             _logger.LogInformation("You requested a method {MethodName}", System.Reflection.MethodBase.GetCurrentMethod().Name);
             await _repo.UpdateAsync(customer);
+            _logr.Information("The following customer has been updated {@Customer}", customer);
             return Ok(customer);
         }
 
@@ -78,6 +87,7 @@ namespace ArticleCommands.WebAPI.Controllers
         {
             _logger.LogInformation("You requested a method {MethodName}", System.Reflection.MethodBase.GetCurrentMethod().Name);
             await _repo.DeleteAsync(customer);
+            _logr.Information("The following customer has been deleted {@Customer}", customer);
             return Ok();
         }
     }

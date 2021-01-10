@@ -27,6 +27,20 @@ namespace ArticleCommands.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            #region addlogging with serilog and seq
+
+            Log.Logger = new LoggerConfiguration()
+             .MinimumLevel.Information()
+             .Enrich.WithProperty("Project", "ArticleCommands.WebAPI")
+             .Enrich.WithProperty("Environment", "Local")
+             .WriteTo.Seq("http://localhost:5341/")
+             .CreateLogger();
+
+            services.AddSingleton<Serilog.ILogger>(Log.Logger);
+
+            #endregion addlogging with serilog and seq
+
             services.AddDbContext<FrontierContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ArticleData")));
 
             services.AddTransient<ICustomerRepository, CustomerRepository>();
@@ -59,7 +73,6 @@ namespace ArticleCommands.WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSerilogRequestLogging();
             app.UseHttpsRedirection();
 
             app.UseRouting();

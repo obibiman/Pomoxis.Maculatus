@@ -11,15 +11,18 @@ namespace ArticleCommands.WebAPI.Database.Repositories
     public class CustomerRepository : ICustomerRepository
     {
         private readonly FrontierContext _ctxt;
+        private readonly Serilog.ILogger _logr;
 
-        public CustomerRepository(FrontierContext ctxt)
+        public CustomerRepository(FrontierContext ctxt, Serilog.ILogger logr)
         {
             _ctxt = ctxt;
+            _logr = logr;
         }
 
         public async Task<Customer> GetByIdAsync(int Id)
         {
             var CustomerSku = await _ctxt.Customers.FirstOrDefaultAsync(y => y.CustomerId == Id);
+            _logr.Information("The following customer has been retrieved {@Customer}", CustomerSku);
             return CustomerSku;
         }
 
@@ -33,6 +36,7 @@ namespace ArticleCommands.WebAPI.Database.Repositories
             customer.DateCreated = DateTime.UtcNow;
             customer.CreatedBy = customer?.CreatedBy ?? "System Ingestion";
             await _ctxt.SaveChangesAsync();
+            _logr.Information("The following customer has been added {@Customer}", customer);
             return customer;
         }
 
@@ -44,14 +48,18 @@ namespace ArticleCommands.WebAPI.Database.Repositories
             {
                 var theId = customerSku.Id;
                 _ctxt.Set<Customer>().Remove(customer);
+                _logr.Information("The following customer will be removed {@Customer}", customer);
             }
+
             await _ctxt.SaveChangesAsync();
+            _logr.Information("The following customer has been removed {@Customer}", customer);
         }
 
         public async Task<IEnumerable<Customer>> GetAllAsync()
         {
-            List<Customer> customerSku = await _ctxt.Customers.ToListAsync();
-            return customerSku;
+            List<Customer> customerSkus = await _ctxt.Customers.ToListAsync();
+            _logr.Information("The following customers have been retrieved {@List<Customer>}", customerSkus);
+            return customerSkus;
         }
 
         public async Task<Customer> UpdateAsync(Customer customer)
@@ -62,6 +70,7 @@ namespace ArticleCommands.WebAPI.Database.Repositories
                 customer.DateModified = DateTime.UtcNow;
                 customer.ModifiedBy = customer?.ModifiedBy ?? "System Update";
                 await _ctxt.SaveChangesAsync();
+                _logr.Information("The following customer has been updated {@Customer}", customer);
             }
             return customer;
         }
