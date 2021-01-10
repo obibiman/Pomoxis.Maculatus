@@ -38,12 +38,5 @@
             <param name="customer"></param>
             <returns>Customer</returns>
         </member>
-        <member name="M:ArticleCommands.WebAPI.Program.CreateHostBuilder(System.String[])">
-            <summary>
-            CreateHostBuilder
-            </summary>
-            <param name="args"></param>
-            <returns></returns>
-        </member>
     </members>
 </doc>

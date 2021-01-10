@@ -7,8 +7,8 @@ namespace DomainUsage.Shared.Models
     {
         public int CourseId { get; set; }
         public string CourseName { get; set; }
-        public string Description { get; set; }
-
-        public IList<StudentCourse> StudentCourses { get; set; }
+        public string CourseNumber { get; set; }
+        public string CourseDescription { get; set; }
+        public ICollection<StudentCourse> Students { get; set; }
     }
 }

@@ -1,1 +1,308 @@
-01/02/2021 22:15:06Application starting up01/02/2021 22:27:06Application starting up01/02/2021 22:34:34Application starting up01/02/2021 22:42:46Application starting up01/04/2021 18:43:14Application starting up01/06/2021 21:33:54Application starting up01/08/2021 19:40:56Application starting up01/08/2021 19:43:51Application starting up01/09/2021 08:31:31Application starting up
+01/02/2021 22:15:06Application starting up01/02/2021 22:27:06Application starting up01/02/2021 22:34:34Application starting up01/02/2021 22:42:46Application starting up01/04/2021 18:43:14Application starting up01/06/2021 21:33:54Application starting up01/08/2021 19:40:56Application starting up01/08/2021 19:43:51Application starting up01/09/2021 08:31:31Application starting up01/09/2021 09:28:26Application starting up01/09/2021 15:55:15An exception occurred while trying to decrypt the element.System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+01/09/2021 15:55:15An exception occurred while processing the key element '"<key id=\"f248d154-288a-4c2e-96cb-431240b015c8\" version=\"1\" />"'.System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+01/09/2021 15:55:15Key {f248d154-288a-4c2e-96cb-431240b015c8} is ineligible to be the default key because its "CreateEncryptor" method failed.System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DeferredKey.<>c__DisplayClass1_0.<GetLazyDescriptorDelegate>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.get_Descriptor()
+   at Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory.CreateEncryptorInstance(IKey key)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.CreateEncryptor()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.CanCreateAuthenticatedEncryptor(IKey key)
+01/09/2021 15:55:15An exception occurred while trying to decrypt the element.System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+01/09/2021 15:55:15An exception occurred while processing the key element '"<key id=\"3517c141-5123-487a-b38d-15c18ccdbf10\" version=\"1\" />"'.System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+01/09/2021 15:55:15Key {3517c141-5123-487a-b38d-15c18ccdbf10} is ineligible to be the default key because its "CreateEncryptor" method failed.System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DeferredKey.<>c__DisplayClass1_0.<GetLazyDescriptorDelegate>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.get_Descriptor()
+   at Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory.CreateEncryptorInstance(IKey key)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.CreateEncryptor()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.CanCreateAuthenticatedEncryptor(IKey key)
+01/09/2021 15:55:17HTTP "GET" "/weatherforecast" responded 200 in 179.6247 ms01/09/2021 15:55:18HTTP "GET" "/favicon.ico" responded 404 in 173.1120 ms01/09/2021 16:01:29HTTP "GET" "/weatherforecast" responded 200 in 6.3993 ms01/09/2021 16:04:45HTTP "GET" "/weatherforecast" responded 200 in 4.0651 ms01/09/2021 17:01:53An exception occurred while trying to decrypt the element.System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+01/09/2021 17:01:54An exception occurred while processing the key element '"<key id=\"c9f48d03-651e-480e-a95c-1c9c5c8ba73e\" version=\"1\" />"'.System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+01/09/2021 17:01:54Key {c9f48d03-651e-480e-a95c-1c9c5c8ba73e} is ineligible to be the default key because its "CreateEncryptor" method failed.System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+   at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+   at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DeferredKey.<>c__DisplayClass1_0.<GetLazyDescriptorDelegate>b__0()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at System.Lazy`1.get_Value()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.get_Descriptor()
+   at Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory.CreateEncryptorInstance(IKey key)
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.CreateEncryptor()
+   at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.CanCreateAuthenticatedEncryptor(IKey key)
+01/09/2021 17:01:58HTTP "GET" "/weatherforecast" responded 200 in 163.0082 ms01/09/2021 17:27:37HTTP "GET" "/weatherforecast" responded 200 in 104.6002 ms01/09/2021 17:27:53You requested a method "MoveNext"01/09/2021 17:27:54Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/09/2021 17:28:10Executed DbCommand ("344"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[CustomerId], [b].[Created_By], [b].[Credit_Score], [b].[Date_Created], [b].[Date_Modified], [b].[Date_of_Birth], [b].[Email_Address], [b].[EmploymentStatus], [b].[First_Name], [b].[Citizenship_Status], [b].[Last_Name], [b].[Loyalty_Member], [b].[MaritalStatus], [b].[Middle_Name], [b].[Modified_By], [b].[Occupation], [b].[Phone_Number], [b].[Salary]
+FROM [b2c].[B2C_Customer] AS [b]"01/09/2021 17:28:11HTTP "GET" "/api/Customer/GetAllCustomers" responded 200 in 17911.9298 ms01/10/2021 12:55:52Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 12:56:15Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 12:56:23Executed DbCommand ("46"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 12:56:23Executed DbCommand ("172"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 12:56:23Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 12:56:23Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 12:56:23Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 12:56:23Applying migration '"20210110185552_many-to-many"'.01/10/2021 12:59:28Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 12:59:43Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 12:59:43Executed DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 12:59:43Executed DbCommand ("48"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 12:59:43Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 12:59:43Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 12:59:43Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 12:59:43Applying migration '"20210110185552_many-to-many"'.01/10/2021 13:03:40Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 13:07:04Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 13:07:07Executed DbCommand ("23"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 13:07:07Executed DbCommand ("158"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 13:07:07Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 13:07:07Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 13:07:07Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 13:07:07Applying migration '"20210110185552_many-to-many"'.01/10/2021 13:19:22Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 13:20:18Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 13:20:18Executed DbCommand ("23"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 13:20:18Executed DbCommand ("42"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 13:20:18Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 13:20:18Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 13:20:18Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 13:20:18Applying migration '"20210110185552_many-to-many"'.01/10/2021 13:27:28Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 13:27:40Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 13:27:40Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 13:27:40Executed DbCommand ("29"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 13:27:40Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 13:27:40Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 13:27:40Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 13:27:40Applying migration '"20210110185552_many-to-many"'.01/10/2021 13:29:09Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 13:29:23Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 13:29:24Executed DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 13:29:24Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 13:29:24Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 13:29:24Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 13:29:24Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 13:29:24Applying migration '"20210110185552_many-to-many"'.01/10/2021 14:24:26Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:25:08Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:25:09Executed DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 14:25:09Executed DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 14:25:09Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 14:25:09Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 14:25:09Executed DbCommand ("17"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 14:25:09Applying migration '"20210110202426_InitialDataLoad"'.01/10/2021 14:25:09Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF SCHEMA_ID(N'edu') IS NULL EXEC(N'CREATE SCHEMA [edu];');"01/10/2021 14:25:09Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF SCHEMA_ID(N'b2c') IS NULL EXEC(N'CREATE SCHEMA [b2c];');"01/10/2021 14:25:09Failed executing DbCommand ("7"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE SEQUENCE [NationalIndentificationNumber] AS int START WITH 1010101 INCREMENT BY 137 NO MINVALUE NO MAXVALUE NO CYCLE;"01/10/2021 14:27:21Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:27:31Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:27:32Executed DbCommand ("22"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 14:27:32Executed DbCommand ("43"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 14:27:32Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 14:27:32Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 14:27:32Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 14:27:32Applying migration '"20210110202426_InitialDataLoad"'.01/10/2021 14:27:32Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF SCHEMA_ID(N'edu') IS NULL EXEC(N'CREATE SCHEMA [edu];');"01/10/2021 14:27:32Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF SCHEMA_ID(N'b2c') IS NULL EXEC(N'CREATE SCHEMA [b2c];');"01/10/2021 14:27:32Failed executing DbCommand ("54"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE SEQUENCE [NationalIndentificationNumber] AS int START WITH 1010101 INCREMENT BY 137 NO MINVALUE NO MAXVALUE NO CYCLE;"01/10/2021 14:30:46Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:31:04Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:31:05Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 14:31:05Executed DbCommand ("51"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 14:31:05Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 14:31:05Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 14:31:05Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 14:31:05Applying migration '"20210110203047_InitialDataLoading"'.01/10/2021 14:31:05Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF SCHEMA_ID(N'edu') IS NULL EXEC(N'CREATE SCHEMA [edu];');"01/10/2021 14:31:05Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF SCHEMA_ID(N'b2c') IS NULL EXEC(N'CREATE SCHEMA [b2c];');"01/10/2021 14:31:05Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE SEQUENCE [NationalIndentificationSequence] AS int START WITH 1010101 INCREMENT BY 137 NO MINVALUE NO MAXVALUE NO CYCLE;"01/10/2021 14:31:05Failed executing DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Person] (
+    [PersonId] int NOT NULL DEFAULT (NEXT VALUE FOR NationalIndentificationSequence),
+    [ModifiedBy] nvarchar(max) NULL,
+    [DateModified] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [FirstName] nvarchar(max) NULL,
+    [MiddleName] nvarchar(max) NULL,
+    [LastName] nvarchar(max) NULL,
+    [DateOfBirth] datetime2 NOT NULL,
+    [Nationality] nvarchar(max) NULL,
+    CONSTRAINT [PK_Person] PRIMARY KEY ([PersonId])
+);"01/10/2021 14:33:03Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:33:22Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:33:33Executed DbCommand ("843"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""CREATE DATABASE [ArticleDb];"01/10/2021 14:33:34Executed DbCommand ("258"ms) [Parameters=[""], CommandType='Text', CommandTimeout='60']"
+""IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [ArticleDb] SET READ_COMMITTED_SNAPSHOT ON;
+END;"01/10/2021 14:33:34Executed DbCommand ("9"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 14:33:34Executed DbCommand ("12"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);"01/10/2021 14:33:34Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"01/10/2021 14:33:34Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"01/10/2021 14:33:34Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"01/10/2021 14:33:34Applying migration '"20210110203303_InitialDataLoading"'.01/10/2021 14:33:34Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF SCHEMA_ID(N'edu') IS NULL EXEC(N'CREATE SCHEMA [edu];');"01/10/2021 14:33:34Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""IF SCHEMA_ID(N'b2c') IS NULL EXEC(N'CREATE SCHEMA [b2c];');"01/10/2021 14:33:34Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE SEQUENCE [NationalIndentificationSequence] AS int START WITH 1010101 INCREMENT BY 137 NO MINVALUE NO MAXVALUE NO CYCLE;"01/10/2021 14:33:34Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Person] (
+    [PersonId] int NOT NULL DEFAULT (NEXT VALUE FOR NationalIndentificationSequence),
+    [ModifiedBy] nvarchar(max) NULL,
+    [DateModified] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [FirstName] nvarchar(max) NULL,
+    [MiddleName] nvarchar(max) NULL,
+    [LastName] nvarchar(max) NULL,
+    [DateOfBirth] datetime2 NOT NULL,
+    [Nationality] nvarchar(max) NULL,
+    CONSTRAINT [PK_Person] PRIMARY KEY ([PersonId])
+);"01/10/2021 14:33:34Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [b2c].[B2C_Customer] (
+    [CustomerId] int NOT NULL IDENTITY,
+    [Modified_By] nvarchar(50) NULL,
+    [Date_Modified] datetime NULL,
+    [Created_By] nvarchar(50) NULL,
+    [Date_Created] datetime NOT NULL,
+    [First_Name] nvarchar(50) NOT NULL,
+    [Middle_Name] nvarchar(50) NULL,
+    [Last_Name] nvarchar(50) NOT NULL,
+    [Date_of_Birth] datetime NOT NULL,
+    [Occupation] nvarchar(20) NULL,
+    [Citizenship_Status] nvarchar(10) NOT NULL,
+    [Loyalty_Member] bit NULL,
+    [EmploymentStatus] int NOT NULL,
+    [Email_Address] nvarchar(50) NULL,
+    [Phone_Number] nvarchar(10) NULL,
+    [MaritalStatus] int NOT NULL,
+    [Salary] decimal (18,2) NULL,
+    [Credit_Score] int NULL,
+    CONSTRAINT [PK_B2C_Customer] PRIMARY KEY ([CustomerId])
+);"01/10/2021 14:33:34Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [edu].[EDU_Course] (
+    [CourseId] int NOT NULL IDENTITY,
+    [ModifiedBy] nvarchar(max) NULL,
+    [DateModified] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [Course_Name] nvarchar(50) NOT NULL,
+    [Course_Number] nvarchar(4) NOT NULL,
+    [Course_Description] nvarchar(1024) NOT NULL,
+    CONSTRAINT [PK_EDU_Course] PRIMARY KEY ([CourseId])
+);"01/10/2021 14:33:34Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [edu].[EDU_Student] (
+    [StudentId] int NOT NULL IDENTITY,
+    [ModifiedBy] nvarchar(max) NULL,
+    [DateModified] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [DateCreated] datetime2 NOT NULL,
+    [First_Name] nvarchar(50) NOT NULL,
+    [Middle_Name] nvarchar(50) NULL,
+    [Last_Name] nvarchar(50) NOT NULL,
+    [Date_of_Birth] datetime NOT NULL,
+    CONSTRAINT [PK_EDU_Student] PRIMARY KEY ([StudentId])
+);"01/10/2021 14:33:34Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [StudentCourses] (
+    [StudentId] int NOT NULL,
+    [CourseId] int NOT NULL,
+    [ModifiedBy] nvarchar(max) NULL,
+    [DateModified] datetime2 NULL,
+    [CreatedBy] nvarchar(max) NULL,
+    [DateCreated] datetime2 NOT NULL,
+    CONSTRAINT [PK_StudentCourses] PRIMARY KEY ([StudentId], [CourseId]),
+    CONSTRAINT [FK_StudentCourses_EDU_Course_CourseId] FOREIGN KEY ([CourseId]) REFERENCES [edu].[EDU_Course] ([CourseId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_StudentCourses_EDU_Student_StudentId] FOREIGN KEY ([StudentId]) REFERENCES [edu].[EDU_Student] ([StudentId]) ON DELETE CASCADE
+);"01/10/2021 14:33:34Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_StudentCourses_CourseId] ON [StudentCourses] ([CourseId]);"01/10/2021 14:33:34Executed DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20210110203303_InitialDataLoading', N'3.1.10');"01/10/2021 14:48:38HTTP "GET" "/weatherforecast" responded 200 in 432.8629 ms01/10/2021 14:48:39HTTP "GET" "/favicon.ico" responded 404 in 157.9387 ms01/10/2021 14:49:34You requested a method "MoveNext"01/10/2021 14:49:34Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:49:35Executed DbCommand ("295"ms) [Parameters=["@p0='?' (Size = 50), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (Size = 50), @p6='?' (DbType = Int32), @p7='?' (Size = 50), @p8='?' (Size = 10), @p9='?' (Size = 50), @p10='?' (DbType = Boolean), @p11='?' (DbType = Int32), @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 20), @p15='?' (Size = 10), @p16='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [b2c].[B2C_Customer] ([Created_By], [Credit_Score], [Date_Created], [Date_Modified], [Date_of_Birth], [Email_Address], [EmploymentStatus], [First_Name], [Citizenship_Status], [Last_Name], [Loyalty_Member], [MaritalStatus], [Middle_Name], [Modified_By], [Occupation], [Phone_Number], [Salary])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+SELECT [CustomerId]
+FROM [b2c].[B2C_Customer]
+WHERE @@ROWCOUNT = 1 AND [CustomerId] = scope_identity();"01/10/2021 14:49:36HTTP "POST" "/api/Customer/CreateCustomer" responded 200 in 2493.9503 ms01/10/2021 14:50:34You requested a method "MoveNext"01/10/2021 14:50:35Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:50:35Executed DbCommand ("3"ms) [Parameters=["@p0='?' (Size = 50), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (Size = 50), @p6='?' (DbType = Int32), @p7='?' (Size = 50), @p8='?' (Size = 10), @p9='?' (Size = 50), @p10='?' (DbType = Boolean), @p11='?' (DbType = Int32), @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 20), @p15='?' (Size = 10), @p16='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [b2c].[B2C_Customer] ([Created_By], [Credit_Score], [Date_Created], [Date_Modified], [Date_of_Birth], [Email_Address], [EmploymentStatus], [First_Name], [Citizenship_Status], [Last_Name], [Loyalty_Member], [MaritalStatus], [Middle_Name], [Modified_By], [Occupation], [Phone_Number], [Salary])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+SELECT [CustomerId]
+FROM [b2c].[B2C_Customer]
+WHERE @@ROWCOUNT = 1 AND [CustomerId] = scope_identity();"01/10/2021 14:50:35HTTP "POST" "/api/Customer/CreateCustomer" responded 200 in 50.5113 ms01/10/2021 14:50:58You requested a method "MoveNext"01/10/2021 14:50:58Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:50:59Executed DbCommand ("3"ms) [Parameters=["@__customer_CustomerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [b].[CustomerId], [b].[Created_By], [b].[Credit_Score], [b].[Date_Created], [b].[Date_Modified], [b].[Date_of_Birth], [b].[Email_Address], [b].[EmploymentStatus], [b].[First_Name], [b].[Citizenship_Status], [b].[Last_Name], [b].[Loyalty_Member], [b].[MaritalStatus], [b].[Middle_Name], [b].[Modified_By], [b].[Occupation], [b].[Phone_Number], [b].[Salary]
+FROM [b2c].[B2C_Customer] AS [b]
+WHERE [b].[CustomerId] = @__customer_CustomerId_0"01/10/2021 14:50:59HTTP "PUT" "/api/Customer/UpdateCustomer" responded 200 in 404.3089 ms01/10/2021 14:51:16You requested a method "MoveNext"01/10/2021 14:51:16Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:51:16Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[CustomerId], [b].[Created_By], [b].[Credit_Score], [b].[Date_Created], [b].[Date_Modified], [b].[Date_of_Birth], [b].[Email_Address], [b].[EmploymentStatus], [b].[First_Name], [b].[Citizenship_Status], [b].[Last_Name], [b].[Loyalty_Member], [b].[MaritalStatus], [b].[Middle_Name], [b].[Modified_By], [b].[Occupation], [b].[Phone_Number], [b].[Salary]
+FROM [b2c].[B2C_Customer] AS [b]"01/10/2021 14:51:16HTTP "GET" "/api/Customer/GetAllCustomers" responded 200 in 83.3685 ms01/10/2021 14:53:03You requested a method "MoveNext"01/10/2021 14:53:03Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:53:03Executed DbCommand ("1"ms) [Parameters=["@p0='?' (Size = 50), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (Size = 50), @p6='?' (DbType = Int32), @p7='?' (Size = 50), @p8='?' (Size = 10), @p9='?' (Size = 50), @p10='?' (DbType = Boolean), @p11='?' (DbType = Int32), @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 20), @p15='?' (Size = 10), @p16='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [b2c].[B2C_Customer] ([Created_By], [Credit_Score], [Date_Created], [Date_Modified], [Date_of_Birth], [Email_Address], [EmploymentStatus], [First_Name], [Citizenship_Status], [Last_Name], [Loyalty_Member], [MaritalStatus], [Middle_Name], [Modified_By], [Occupation], [Phone_Number], [Salary])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+SELECT [CustomerId]
+FROM [b2c].[B2C_Customer]
+WHERE @@ROWCOUNT = 1 AND [CustomerId] = scope_identity();"01/10/2021 14:53:03HTTP "POST" "/api/Customer/CreateCustomer" responded 200 in 28.3992 ms01/10/2021 14:53:13You requested a method "MoveNext"01/10/2021 14:53:13Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:53:13Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[CustomerId], [b].[Created_By], [b].[Credit_Score], [b].[Date_Created], [b].[Date_Modified], [b].[Date_of_Birth], [b].[Email_Address], [b].[EmploymentStatus], [b].[First_Name], [b].[Citizenship_Status], [b].[Last_Name], [b].[Loyalty_Member], [b].[MaritalStatus], [b].[Middle_Name], [b].[Modified_By], [b].[Occupation], [b].[Phone_Number], [b].[Salary]
+FROM [b2c].[B2C_Customer] AS [b]"01/10/2021 14:53:13HTTP "GET" "/api/Customer/GetAllCustomers" responded 200 in 11.7398 ms01/10/2021 14:54:19HTTP "PUT" "/api/Customer/UpdateCustomer" responded 400 in 161.4626 ms01/10/2021 14:54:26HTTP "PUT" "/api/Customer/UpdateCustomer" responded 400 in 9.4220 ms01/10/2021 14:54:40You requested a method "MoveNext"01/10/2021 14:54:40Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:54:40Executed DbCommand ("2"ms) [Parameters=["@__customer_CustomerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [b].[CustomerId], [b].[Created_By], [b].[Credit_Score], [b].[Date_Created], [b].[Date_Modified], [b].[Date_of_Birth], [b].[Email_Address], [b].[EmploymentStatus], [b].[First_Name], [b].[Citizenship_Status], [b].[Last_Name], [b].[Loyalty_Member], [b].[MaritalStatus], [b].[Middle_Name], [b].[Modified_By], [b].[Occupation], [b].[Phone_Number], [b].[Salary]
+FROM [b2c].[B2C_Customer] AS [b]
+WHERE [b].[CustomerId] = @__customer_CustomerId_0"01/10/2021 14:54:40HTTP "PUT" "/api/Customer/UpdateCustomer" responded 200 in 11.5688 ms01/10/2021 14:55:12HTTP "PUT" "/api/Customer/UpdateCustomer" responded 400 in 4.4515 ms01/10/2021 14:55:39HTTP "PUT" "/api/Customer/UpdateCustomer" responded 400 in 6.6071 ms01/10/2021 14:56:14You requested a method "MoveNext"01/10/2021 14:56:14Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:56:14Executed DbCommand ("1"ms) [Parameters=["@__customer_CustomerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [b].[CustomerId], [b].[Created_By], [b].[Credit_Score], [b].[Date_Created], [b].[Date_Modified], [b].[Date_of_Birth], [b].[Email_Address], [b].[EmploymentStatus], [b].[First_Name], [b].[Citizenship_Status], [b].[Last_Name], [b].[Loyalty_Member], [b].[MaritalStatus], [b].[Middle_Name], [b].[Modified_By], [b].[Occupation], [b].[Phone_Number], [b].[Salary]
+FROM [b2c].[B2C_Customer] AS [b]
+WHERE [b].[CustomerId] = @__customer_CustomerId_0"01/10/2021 14:56:14HTTP "PUT" "/api/Customer/UpdateCustomer" responded 200 in 6.2675 ms01/10/2021 14:56:14An exception occurred while iterating over the results of a query for context type '"ArticleCommands.WebAPI.Database.FrontierContext"'."
+""System.ObjectDisposedException: Cannot access a disposed object. A common cause of this error is disposing a context that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling Dispose() on the context, or wrapping the context in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'FrontierContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.get_StateManager()
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()"System.ObjectDisposedException: Cannot access a disposed object. A common cause of this error is disposing a context that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling Dispose() on the context, or wrapping the context in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'FrontierContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.get_StateManager()
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , Int32[] , ResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+01/10/2021 14:57:19You requested a method "MoveNext"01/10/2021 14:57:19Entity Framework Core "3.1.10" initialized '"FrontierContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"01/10/2021 14:57:19Executed DbCommand ("2"ms) [Parameters=["@p0='?' (Size = 50), @p1='?' (DbType = Int32), @p2='?' (DbType = DateTime), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (Size = 50), @p6='?' (DbType = Int32), @p7='?' (Size = 50), @p8='?' (Size = 10), @p9='?' (Size = 50), @p10='?' (DbType = Boolean), @p11='?' (DbType = Int32), @p12='?' (Size = 50), @p13='?' (Size = 50), @p14='?' (Size = 20), @p15='?' (Size = 10), @p16='?' (DbType = Decimal)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [b2c].[B2C_Customer] ([Created_By], [Credit_Score], [Date_Created], [Date_Modified], [Date_of_Birth], [Email_Address], [EmploymentStatus], [First_Name], [Citizenship_Status], [Last_Name], [Loyalty_Member], [MaritalStatus], [Middle_Name], [Modified_By], [Occupation], [Phone_Number], [Salary])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+SELECT [CustomerId]
+FROM [b2c].[B2C_Customer]
+WHERE @@ROWCOUNT = 1 AND [CustomerId] = scope_identity();"01/10/2021 14:57:19HTTP "POST" "/api/Customer/CreateCustomer" responded 200 in 22.7020 ms

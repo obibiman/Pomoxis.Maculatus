@@ -96,27 +96,91 @@ namespace ArticleCommands.WebAPI.Database
             //    .IsClustered(false);
             //});
 
+            #region student and course
+
+            modelBuilder.Entity<Student>()
+                 .ToTable("EDU_Student", "edu");
+            modelBuilder.Entity<Student>()
+            .Property(t => t.StudentId)
+            .ValueGeneratedOnAdd();
+            modelBuilder.Entity<Student>().HasKey(t => new { t.StudentId });
+            modelBuilder.Entity<Student>().Property(t => t.FirstName)
+               .HasMaxLength(50)
+               .IsRequired()
+               .HasColumnName("First_Name")
+               .HasColumnType("nvarchar(50)");
+            modelBuilder.Entity<Student>().Property(t => t.MiddleName)
+                 .HasColumnName("Middle_Name")
+                .HasMaxLength(50)
+                .HasColumnType("nvarchar(50)");
+            modelBuilder.Entity<Student>().Property(t => t.LastName)
+                .HasMaxLength(50)
+                .IsRequired()
+                .HasColumnName("Last_Name")
+                .HasColumnType("nvarchar(50)");
+            modelBuilder.Entity<Student>().Property(t => t.DateOfBirth)
+                .IsRequired()
+                .HasColumnName("Date_of_Birth")
+                .HasColumnType("datetime");
+
+            modelBuilder.Entity<Course>()
+              .ToTable("EDU_Course", "edu");
+            modelBuilder.Entity<Course>()
+            .Property(t => t.CourseId)
+            .ValueGeneratedOnAdd();
+            modelBuilder.Entity<Course>().HasKey(t => new { t.CourseId });
+            modelBuilder.Entity<Course>().Property(t => t.CourseName)
+               .HasMaxLength(50)
+               .IsRequired()
+               .HasColumnName("Course_Name")
+               .HasColumnType("nvarchar(50)");
+            modelBuilder.Entity<Course>().Property(t => t.CourseNumber)
+                 .HasColumnName("Course_Number")
+                .HasMaxLength(4)
+                .IsRequired()
+                .HasColumnType("nvarchar(4)");
+            modelBuilder.Entity<Course>().Property(t => t.CourseDescription)
+                .HasMaxLength(1024)
+                .IsRequired()
+                .HasColumnName("Course_Description")
+                .HasColumnType("nvarchar(1024)");
+
             modelBuilder.Entity<StudentCourse>().HasKey(sc => new { sc.StudentId, sc.CourseId });
 
             modelBuilder.Entity<StudentCourse>()
-                .HasOne<Student>(sc => sc.Student)
-                .WithMany(s => s.StudentCourses)
+                .HasOne(sc => sc.Student)
+                .WithMany(s => s.Courses)
                 .HasForeignKey(sc => sc.StudentId);
 
             modelBuilder.Entity<StudentCourse>()
-                .HasOne<Course>(sc => sc.Course)
-                .WithMany(s => s.StudentCourses)
+                .HasOne(sc => sc.Course)
+                .WithMany(s => s.Students)
                 .HasForeignKey(sc => sc.CourseId);
+
+            #endregion student and course
+
+            #region identity sequence
+
+            //
+           // modelBuilder.Entity<Student>()
+           //     .Property(o => o.StudentId)
+           //     .HasDefaultValueSql("NEXT VALUE FOR NationalIndentificationNumber");
+
+           // modelBuilder.Entity<Course>()
+           //.Property(o => o.CourseId)
+           //.HasDefaultValueSql("NEXT VALUE FOR NationalIndentificationNumber");
 
             //
             modelBuilder.Entity<Person>()
                 .Property(o => o.PersonId)
-                .HasDefaultValueSql("NEXT VALUE FOR NationalIndentificationNumber");
+                .HasDefaultValueSql("NEXT VALUE FOR NationalIndentificationSequence");
 
             //modelBuilder.HasSequence<int>("OrderNumbers");
-            modelBuilder.HasSequence<int>("NationalIndentificationNumber")
+            modelBuilder.HasSequence<int>("NationalIndentificationSequence")
                 .StartsAt(1010101)
                 .IncrementsBy(137);
+
+            #endregion identity sequence
         }
     }
 }

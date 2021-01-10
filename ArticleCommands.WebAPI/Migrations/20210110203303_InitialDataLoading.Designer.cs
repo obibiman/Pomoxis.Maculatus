@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ArticleCommands.WebAPI.Migrations
 {
     [DbContext(typeof(FrontierContext))]
-    [Migration("20201231054426_SchemaUpdateAgainToImagedataType")]
-    partial class SchemaUpdateAgainToImagedataType
+    [Migration("20210110203303_InitialDataLoading")]
+    partial class InitialDataLoading
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,6 +19,7 @@ namespace ArticleCommands.WebAPI.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("Relational:Sequence:.NationalIndentificationSequence", "'NationalIndentificationSequence', '', '1010101', '137', '', '', 'Int32', 'False'")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("DomainUsage.Shared.Models.Course", b =>
@@ -28,8 +29,23 @@ namespace ArticleCommands.WebAPI.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("CourseDescription")
+                        .IsRequired()
+                        .HasColumnName("Course_Description")
+                        .HasColumnType("nvarchar(1024)")
+                        .HasMaxLength(1024);
+
                     b.Property<string>("CourseName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnName("Course_Name")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("CourseNumber")
+                        .IsRequired()
+                        .HasColumnName("Course_Number")
+                        .HasColumnType("nvarchar(4)")
+                        .HasMaxLength(4);
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -40,15 +56,12 @@ namespace ArticleCommands.WebAPI.Migrations
                     b.Property<DateTime?>("DateModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CourseId");
 
-                    b.ToTable("Courses");
+                    b.ToTable("EDU_Course","edu");
                 });
 
             modelBuilder.Entity("DomainUsage.Shared.Models.Customer", b =>
@@ -132,16 +145,52 @@ namespace ArticleCommands.WebAPI.Migrations
                         .HasColumnType("nvarchar(10)")
                         .HasMaxLength(10);
 
-                    b.Property<byte[]>("Photo")
-                        .HasColumnType("image");
-
                     b.Property<decimal?>("Salary")
                         .HasColumnName("Salary")
-                        .HasColumnType("decimal");
+                        .HasColumnType("decimal (18,2)");
 
                     b.HasKey("CustomerId");
 
                     b.ToTable("B2C_Customer","b2c");
+                });
+
+            modelBuilder.Entity("DomainUsage.Shared.Models.Person", b =>
+                {
+                    b.Property<int>("PersonId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValueSql("NEXT VALUE FOR NationalIndentificationSequence");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MiddleName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nationality")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PersonId");
+
+                    b.ToTable("Person");
                 });
 
             modelBuilder.Entity("DomainUsage.Shared.Models.Student", b =>
@@ -160,15 +209,33 @@ namespace ArticleCommands.WebAPI.Migrations
                     b.Property<DateTime?>("DateModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("DateOfBirth")
+                        .HasColumnName("Date_of_Birth")
+                        .HasColumnType("datetime");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnName("First_Name")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnName("Last_Name")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("MiddleName")
+                        .HasColumnName("Middle_Name")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
+                    b.Property<string>("ModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("StudentId");
 
-                    b.ToTable("Students");
+                    b.ToTable("EDU_Student","edu");
                 });
 
             modelBuilder.Entity("DomainUsage.Shared.Models.StudentCourse", b =>
@@ -201,13 +268,13 @@ namespace ArticleCommands.WebAPI.Migrations
             modelBuilder.Entity("DomainUsage.Shared.Models.StudentCourse", b =>
                 {
                     b.HasOne("DomainUsage.Shared.Models.Course", "Course")
-                        .WithMany("StudentCourses")
+                        .WithMany("Students")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DomainUsage.Shared.Models.Student", "Student")
-                        .WithMany("StudentCourses")
+                        .WithMany("Courses")
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
