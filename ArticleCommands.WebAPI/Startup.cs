@@ -43,6 +43,8 @@ namespace ArticleCommands.WebAPI
 
             services.AddDbContext<FrontierContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ArticleData")));
 
+            services.AddTransient<IStudentRepository, StudentRepository>();
+            services.AddTransient<ICourseRepository, CourseRepository>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             // Add framework services.
             services.AddMvc().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);

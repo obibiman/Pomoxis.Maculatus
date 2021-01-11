@@ -4,6 +4,40 @@
         <name>ArticleCommands.WebAPI</name>
     </assembly>
     <members>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICourseRepository.CreateAsync(DomainUsage.Shared.Models.Course)">
+            <summary>
+            CreateAsync
+            </summary>
+            <param name="course"></param>
+            <returns>Course</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICourseRepository.DeleteAsync(DomainUsage.Shared.Models.Course)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="course"></param>
+            <returns>void</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICourseRepository.GetAllAsync">
+            <summary>
+            GetAllAsync
+            </summary>
+            <returns>course list</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICourseRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            GetByIdAsync
+            </summary>
+            <param name="Id"></param>
+            <returns>Course</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICourseRepository.UpdateAsync(DomainUsage.Shared.Models.Course)">
+            <summary>
+            UpdateAsync
+            </summary>
+            <param name="course"></param>
+            <returns>Course</returns>
+        </member>
         <member name="M:ArticleCommands.WebAPI.Database.Contracts.ICustomerRepository.CreateAsync(DomainUsage.Shared.Models.Customer)">
             <summary>
             CreateAsync
@@ -37,6 +71,40 @@
             </summary>
             <param name="customer"></param>
             <returns>Customer</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.IStudentRepository.CreateAsync(DomainUsage.Shared.Models.Student)">
+            <summary>
+            CreateAsync
+            </summary>
+            <param name="student"></param>
+            <returns>Student</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.IStudentRepository.DeleteAsync(DomainUsage.Shared.Models.Student)">
+            <summary>
+            DeleteAsync
+            </summary>
+            <param name="student"></param>
+            <returns>void</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.IStudentRepository.GetAllAsync">
+            <summary>
+            GetAllAsync
+            </summary>
+            <returns>student list</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.IStudentRepository.GetByIdAsync(System.Int32)">
+            <summary>
+            GetByIdAsync
+            </summary>
+            <param name="Id"></param>
+            <returns>Student</returns>
+        </member>
+        <member name="M:ArticleCommands.WebAPI.Database.Contracts.IStudentRepository.UpdateAsync(DomainUsage.Shared.Models.Student)">
+            <summary>
+            UpdateAsync
+            </summary>
+            <param name="student"></param>
+            <returns>Student</returns>
         </member>
     </members>
 </doc>

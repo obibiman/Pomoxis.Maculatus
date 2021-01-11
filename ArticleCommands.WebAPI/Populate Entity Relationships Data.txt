@@ -1,0 +1,4 @@
+﻿
+https://stackoverflow.com/questions/38893873/saving-many-to-many-relationship-in-entity-framework-core
+
+https://www.cbsnews.com/news/60-minutes-producer-bob-anderson-favorite-1990-cream-puff-2020-12-13/

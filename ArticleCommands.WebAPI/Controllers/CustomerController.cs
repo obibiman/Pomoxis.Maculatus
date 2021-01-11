@@ -50,14 +50,10 @@ namespace ArticleCommands.WebAPI.Controllers
         [ProducesResponseType(StatusCodes.Status201Created), ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateCustomer(Customer customer)
         {
-            string author = "To restore the dignity of man";
-
-            byte[] bytes = Encoding.ASCII.GetBytes(author);
-            //customer.Photo = bytes;
             if (!ModelState.IsValid)
             {
-                _logger.LogInformation("You requested a method {MethodName} for {customer}", System.Reflection.MethodBase.GetCurrentMethod().Name, customer);
-                _logr.Information("The following customer has been added {@Customer}", customer);
+                _logger.LogError("You requested a method {MethodName} for {customer}", System.Reflection.MethodBase.GetCurrentMethod().Name, customer);
+                _logr.Error("The following customer has been added {@Customer}", customer);
                 return BadRequest(ModelState);
             }
             else
